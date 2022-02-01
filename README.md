@@ -52,10 +52,11 @@ The outputs are saved as `train_full.csv` and `test_full.csv` in the dataset fol
 If you use the resources presented in this repository, please cite:
 
 ```
-@inbook{10.1145/3460231.3478861,
+@inproceedings{10.1145/3460231.3478861,
   author = {Kostric, Ivica and Balog, Krisztian and Radlinski, Filip},
   title = {Soliciting User Preferences in Conversational Recommender Systems via Usage-Related Questions},
   booktitle = {Fifteenth ACM Conference on Recommender Systems},
+  series = {RecSys '21}
   year = {2021},
   pages = {724--729},
   doi = {10.1145/3460231.3478861}
