@@ -8,7 +8,27 @@ This repository provides resources developed within the following article:
 
 A key distinguishing feature of conversational recommender systems over traditional recommender systems is their ability to elicit user preferences using natural language. Currently, the predominant approach to preference elicitation is to ask questions directly about items or item attributes. These strategies do not perform well in cases where the user does not have sufficient knowledge of the target domain to answer such questions. Conversely, in a shopping setting, talking about the planned use of items does not present any difficulties, even for those that are new to a domain. In this paper, we propose a novel approach to preference elicitation by asking implicit questions based on item usage. Our approach consists of two main steps. First, we identify the sentences from a large review corpus that contain information about item usage. Then, we generate implicit preference elicitation questions from those sentences using a neural text-to-text model. The main contributions of this work also include a multi-stage data annotation protocol using crowdsourcing for collecting high-quality labeled training data for the neural model. We show that out approach is effective in selecting review sentences and transforming them to elicitation questions, even with limited training data.
 
-## Repository Structure
+## Data
+
+
+We are not allowed to re-distribute the [Amazon review collection](https://nijianmo.github.io/amazon/index.html) . Instead, we distribute our dataset with the review IDs (item ID and user ID) and sentence offsets. Additionally, we provide a script that derives the data collection we used from the original Amazon collection.
+
+
+### Dataset Structure 
+
+The dataset contains 1100 reviews with matching implicit questions over 11 categories of products. It is split evenly into train (80%) and test (20%) files. 
+The test file additionally contains 15 questions in the `Birdfeeder` category that is not found in train dataset.
+
+Since the sentences mentioning item usage were extracted heuristically, not all reviews in the dataset have valid questions associated with them. Those are marked as `n/a`.
+
+The files have the following entries:
+
+ - `id`: unique identifier
+ - `category`: A category the item belongs to.
+ - `question1`, `question2`, `question3`: Different variations of the usage question based on the review sentence obtained by crowdsourcing.
+ - `paraphrase1`, `paraphrase2`: Question rewrites obtained by crowdsourcing where the input were `question1`, `question2`, and `question3` and not the review sentence.
+
+### Repository Structure
 
 This repository is structured as follows:
 
@@ -16,7 +36,7 @@ This repository is structured as follows:
 
 - `code/make_dataset.py`: A Python script for populating the dataset with original review text and extracted sentences.
 
-## Obtaining the dataset
+### Obtaining the dataset
 
 To obtain the full dataset use command:
 
