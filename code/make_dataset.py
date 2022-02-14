@@ -95,10 +95,6 @@ def add_reviews(datasets: pd.DataFrame, folder_path: str) -> pd.DataFrame:
                 if not any(matches):
                     continue
 
-                if len(dataset.loc[matches]) > 1:
-                    # Not unique
-                    print(dataset.loc[matches])
-
                 dataset.loc[matches, "reviewText"] = item["reviewText"]
                 dataset.loc[matches, "sentenceText"] = [
                     item["reviewText"][start:end]
