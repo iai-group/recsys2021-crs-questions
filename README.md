@@ -2,7 +2,7 @@
 
 This repository provides resources developed within the following article:
 
-> I. Kostric, K. Balog and F. Radlinski. **Soliciting User Preferences in Conversational Recommender Systems via Usage-related Questions** In: RecSys '21: Fifteenth ACM Conference on Recommender Systems.     Association for Computing Machinery, New York, NY, United States. September 2021. [DOI: 10.1145/3460231.3478861](https://doi.org/10.1145/3460231.3478861) [PDF](https://arxiv.org/pdf/2111.13463.pdf)
+> I. Kostric, K. Balog and F. Radlinski. **Soliciting User Preferences in Conversational Recommender Systems via Usage-related Questions** In: RecSys '21: Fifteenth ACM Conference on Recommender Systems.     Association for Computing Machinery, New York, NY, United States. September 2021. [DOI: 10.1145/3460231.3478861](https://doi.org/10.1145/3460231.3478861) [[PDF](https://arxiv.org/pdf/2111.13463.pdf)]
 
 ## Summary
 
