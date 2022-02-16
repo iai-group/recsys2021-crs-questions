@@ -98,14 +98,16 @@ def add_reviews(datasets: pd.DataFrame, folder_path: str) -> pd.DataFrame:
                 dataset.loc[matches, "reviewText"] = item["reviewText"]
                 dataset.loc[matches, "sentenceText"] = [
                     item["reviewText"][start:end]
-                    for start, end in zip(dataset[matches].start, dataset[matches].end)
+                    for start, end in zip(
+                        dataset[matches].start, dataset[matches].end
+                    )
                 ]
-        if i != total:
+        if i + 1 != total:
             print(
-                f"Number of lines in {filename} does not match the expected "
-                f"number of lines ({total})."
+                f"Number of lines in {filename} ({i+1}) does not match the "
+                f"expected number of lines ({total})."
             )
-    return dataset
+    return datasets
 
 
 def main(args: argparse.Namespace) -> None:
