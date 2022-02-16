@@ -27,6 +27,19 @@ The files have the following entries:
  - `category`: A category the item belongs to.
  - `question1`, `question2`, `question3`: Different variations of the usage question based on the review sentence obtained by crowdsourcing.
  - `paraphrase1`, `paraphrase2`: Question rewrites obtained by crowdsourcing where the input were `question1`, `question2`, and `question3` and not the review sentence.
+ - `reviewerID`: Reviewer ID.
+ - `asin`: product ID.
+ - `start_index`: Start index of the extracted sentence.
+ - `end_index`: End index of the extracted sentence.
+
+Top 3 rows from the training dataset:
+
+
+| Id         | category     | question1 |question2 |question3 |paraphrase1 |paraphrase2 |reviewerID|asin|start_index|end_index|
+|--------------|-----------|------------|------------|------------|------------|------------|------------|------------|------------|------------|
+| 307...3NL         | Tent     | Are you interested in a tent that is perfect for backpacking and biking? |do you want a tent who is perfect for backpacking and biking? |Do you want a tent that's perfect for backpacking and biking? |Can you use a tent that is great for both biking and hiking? |Do you want a comfortable cycling tent? |A2P8B5PMOIE7W|B00A8E2F88|0|34|
+| 30E...6YK         | Walk-behind lawnmower     | Would you like a walk-behind lawnmower able to handle big yards? |Do you want a walk-behind lawnmower that can mow a big yard? |Are you looking for walk-behind lawnmower to mow a big yard? |Need a lawnmower that can mow a big yard? |How does a walk behind lawnmower to mow a big yard sound? |AEEI3GYQ5R0O5|B00Q2MGO32|80|139|
+| 32T...84N         | Bike     | Are you looking for a bike that is great for commuting? |Would you like a bike that is good for commuting? |Do you want a bike that is great for commuting? |Are you interested in purchasing a bike that makes it easy for commuting? |Do you want a bike that can be used for commuting? |A2RLVLI4RIXPW8|B004Q3N0GI|0|84|
 
 ### Repository Structure
 
