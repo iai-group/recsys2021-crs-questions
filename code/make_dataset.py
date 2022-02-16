@@ -99,7 +99,7 @@ def add_reviews(datasets: pd.DataFrame, folder_path: str) -> pd.DataFrame:
                 dataset.loc[matches, "sentenceText"] = [
                     item["reviewText"][start:end]
                     for start, end in zip(
-                        dataset[matches].start, dataset[matches].end
+                        dataset[matches].start_index, dataset[matches].end_index
                     )
                 ]
         if i + 1 != total:
